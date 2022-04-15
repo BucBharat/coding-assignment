@@ -61,7 +61,6 @@ export default {
   methods: {
     detailsSubmit() {
       if (this.usernameValue === 'admin' && this.passwordValue === '1234') {
-        alert('login successfull');
         localStorage.setItem('accessToken', true);
         this.$router.push({ name: 'Users' });
       } else {
