@@ -1,7 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <h1>Creating home page currently</h1>
     <!-- <form @submit.prevent="createEvent">
       <div class="field">
         <label>Username</label>
