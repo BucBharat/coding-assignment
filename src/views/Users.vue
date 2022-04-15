@@ -148,5 +148,11 @@ img:hover {
   #sideBar {
     display: none;
   }
+  .displayClass {
+    /* position: relative; */
+    position: fixed !important;
+    top: 10vh;
+    left: 45vw;
+  }
 }
 </style>
