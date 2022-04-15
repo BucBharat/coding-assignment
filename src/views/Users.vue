@@ -75,9 +75,10 @@ export default {
 </script>
 
 <style scoped>
-#signout {
+/* #signout {
   position: sticky;
-}
+} */
+
 .displayClass {
   /* position: relative; */
   position: fixed !important;
@@ -108,6 +109,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: sticky !important;
+  top: 0;
 }
 #signOut {
   margin-top: auto;
