@@ -5,7 +5,7 @@
       <MenuElement />
       <MenuElement />
       <MenuElement />
-      <p id="signOut">signout</p>
+      <button id="signOut" @click="signOut">signout</button>
     </div>
     <div id="imageBox" class="users">
       <div id="indImage" v-for="user in users" :key="user.id">
@@ -48,7 +48,6 @@ export default {
     };
   },
   methods: {
-    detailsSubmit() {},
     showModal(user) {
       this.modalDisplay = true;
       //   this.modalDisplay = !this.modalDisplay;
@@ -57,6 +56,10 @@ export default {
     },
     closeModal() {
       this.modalDisplay = false;
+    },
+    signOut() {
+      localStorage.removeItem('accessToken');
+      this.$router.push({ name: 'Login' });
     },
   },
   created() {
@@ -73,7 +76,7 @@ export default {
 
 <style scoped>
 .displayClass {
-  position: absolute;
+  /* position: relative; */
   top: 45vh;
   left: 45vw;
 }
