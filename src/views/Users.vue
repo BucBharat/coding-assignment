@@ -136,4 +136,10 @@ img:hover {
   visibility: visible;
   opacity: 0.7;
 }
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #sideBar {
+    display: none;
+  }
+}
 </style>
