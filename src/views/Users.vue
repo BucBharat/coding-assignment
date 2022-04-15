@@ -75,8 +75,12 @@ export default {
 </script>
 
 <style scoped>
+#signout {
+  position: sticky;
+}
 .displayClass {
   /* position: relative; */
+  position: fixed !important;
   top: 45vh;
   left: 45vw;
 }
@@ -135,5 +139,11 @@ img:hover {
   padding: 8px 15px;
   visibility: visible;
   opacity: 0.7;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #sideBar {
+    display: none;
+  }
 }
 </style>

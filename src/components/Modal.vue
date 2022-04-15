@@ -31,7 +31,7 @@ export default {
 #modalID {
   background-color: black;
   color: white;
-  box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.2); */
   display: flex;
   height: 40vh;
   width: 40vw;
@@ -51,5 +51,39 @@ h2 {
   top: 0;
   right: 0;
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+  /* For mobile phones: */
+  #modalID {
+    min-height: 700px;
+    height: 50%;
+    width: 50%;
+    flex-direction: column;
+    background-color: black;
+    z-index: 100;
+  }
+  #details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+@media only screen and (max-width: 720px) and (min-width: 520px) {
+  #modalID {
+    min-height: 900px;
+    height: 50%;
+    width: 50%;
+    flex-direction: column;
+    background-color: black;
+    z-index: 100;
+  }
+  #details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
 }
 </style>
