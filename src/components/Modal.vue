@@ -2,11 +2,28 @@
   <div ref="modal" id="modalID">
     <img :src="user.image" max-width="200" max-height="400" />
     <div id="details">
-      <p>{{ user.name }}</p>
-      <a :href="mailTo">{{ user.email }}</a>
-      <p>{{ user.phone }}</p>
-      <p>{{ user.address.city }}, {{ user.address.street }}</p>
-      <p>{{ user.website }}</p>
+      <!-- <font-awesome-icon icon="fa-solid fa-user-secret" /> -->
+      <!-- <div style="display: flex"> -->
+      <!-- <font-awesome-icon icon="fa-solid fa-user" /> -->
+      <p><font-awesome-icon icon="fa-solid fa-user" /> &emsp;{{ user.name }}</p>
+      <!-- </div> -->
+      <a :href="mailTo"
+        ><font-awesome-icon icon="fa-solid fa-envelope" /> &emsp;{{
+          user.email
+        }}</a
+      >
+      <p>
+        <font-awesome-icon icon="fa-solid fa-phone" />&emsp;{{ user.phone }}
+      </p>
+      <p>
+        <font-awesome-icon icon="fa-solid fa-house" />&emsp;{{
+          user.address.city
+        }},
+        {{ user.address.street }}
+      </p>
+      <p>
+        <font-awesome-icon icon="fa-brands fa-chrome" />&emsp;{{ user.website }}
+      </p>
     </div>
     <h2 @click="closeModal">X</h2>
   </div>
