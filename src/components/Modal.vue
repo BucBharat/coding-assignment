@@ -38,6 +38,7 @@ a,
 a:hover,
 a:focus,
 a:active {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
@@ -59,6 +60,7 @@ a:active {
   width: 25vw;
 }
 h2 {
+  cursor: pointer;
   position: relative;
   color: white;
   top: 0;
