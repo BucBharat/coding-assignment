@@ -13,12 +13,12 @@
     <div id="mobileSideBar" @click="showMobileSideBar">
       <font-awesome-icon icon="fa-solid fa-bars" />
     </div>
-    <div v-if="mobileSideBarVar">
+    <div id="mobileSideBarContent" v-if="mobileSideBarVar">
       <p style="padding-top: 30px">company name</p>
       <MenuElement />
       <MenuElement />
       <MenuElement />
-      <button id="signOut" @click="signOut">
+      <button @click="signOut">
         <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" />
         &emsp; signout
       </button>
@@ -187,6 +187,12 @@ img:hover {
     /* width: 20vw; */
     display: flex;
   }
+  #mobileSideBarContent {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+  }
+
   .displayClass {
     /* position: relative; */
     position: fixed !important;
@@ -201,7 +207,6 @@ img:hover {
   }
 }
 @media only screen and (max-width: 1295px) and (min-width: 768px) {
-  /* For mobile phones: */
   #sideBar {
     display: none;
   }
@@ -209,6 +214,7 @@ img:hover {
     /* width: 20vw; */
     display: flex;
   }
+
   .displayClass {
     /* position: relative; */
     position: fixed !important;
@@ -220,6 +226,18 @@ img:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 60vw;
+  }
+}
+@media only screen and (min-width: 1295px) {
+  /* #sideBar {
+    display: none;
+  } */
+  #mobileSideBar {
+    display: none;
+  }
+
+  #mobileSideBarContent {
+    display: none;
   }
 }
 </style>
