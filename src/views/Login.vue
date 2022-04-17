@@ -75,7 +75,7 @@ export default {
         w.focus();
         setTimeout(function () {
           w.close();
-        }, 5000);
+        }, 1000);
 
         // setTimeout(function () {
         //   alert('Entered wrong details');
