@@ -64,7 +64,23 @@ export default {
         localStorage.setItem('accessToken', true);
         this.$router.push({ name: 'Users' });
       } else {
-        alert('Entered wrong details');
+        // window.setTimeout('alert("Message goes here")', 500);
+
+        var w = window.open(
+          'Wrong details',
+          'Wrong details',
+          'top=500,left=500,width=400,height=400'
+        );
+        w.document.write('Entered wrong details');
+        w.focus();
+        setTimeout(function () {
+          w.close();
+        }, 5000);
+
+        // setTimeout(function () {
+        //   alert('Entered wrong details');
+        // }, 1000);
+        // alert('Entered wrong details');
         this.usernameValue = '';
         this.passwordValue = '';
       }
