@@ -3,7 +3,8 @@
     <img :src="user.image" max-width="200" max-height="400" />
     <div id="details">
       <p>{{ user.name }}</p>
-      <p>{{ user.email }}</p>
+      <a :href="mailTo">{{ user.email }}</a>
+      <!-- <p>{{ user.email }}</p> -->
       <p>{{ user.phone }}</p>
       <p>{{ user.address.city }}, {{ user.address.street }}</p>
       <p>{{ user.website }}</p>
@@ -24,10 +25,22 @@ export default {
       this.$emit('close-modal');
     },
   },
+  computed: {
+    mailTo() {
+      return 'mail.to:' + this.user.email;
+    },
+  },
 };
 </script>
 
 <style scoped>
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 #modalID {
   background-color: black;
   color: white;
