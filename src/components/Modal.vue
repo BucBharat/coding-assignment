@@ -4,7 +4,6 @@
     <div id="details">
       <p>{{ user.name }}</p>
       <a :href="mailTo">{{ user.email }}</a>
-      <!-- <p>{{ user.email }}</p> -->
       <p>{{ user.phone }}</p>
       <p>{{ user.address.city }}, {{ user.address.street }}</p>
       <p>{{ user.website }}</p>
@@ -27,7 +26,7 @@ export default {
   },
   computed: {
     mailTo() {
-      return 'mail.to:' + this.user.email;
+      return 'mailto:' + this.user.email;
     },
   },
 };
