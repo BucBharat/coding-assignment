@@ -84,7 +84,24 @@ h2 {
     align-content: center;
   }
 }
-@media only screen and (max-width: 720px) and (min-width: 520px) {
+@media only screen and (max-width: 1295px) and (min-width: 937px) {
+  #modalID {
+    min-height: 900px;
+    height: 90%;
+    width: 50%;
+    flex-direction: column;
+    background-color: black;
+    z-index: 100;
+  }
+  #details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+  }
+}
+@media only screen and (max-width: 937px) and (min-width: 525px) {
   #modalID {
     min-height: 900px;
     height: 50%;

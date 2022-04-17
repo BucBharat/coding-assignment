@@ -161,8 +161,20 @@ img:hover {
   .displayClass {
     /* position: relative; */
     position: fixed !important;
-    top: 10vh;
-    left: 45vw;
+    top: 15%;
+    left: 15%;
+  }
+}
+@media only screen and (max-width: 1295px) and (min-width: 768px) {
+  /* For mobile phones: */
+  #sideBar {
+    display: none;
+  }
+  .displayClass {
+    /* position: relative; */
+    position: fixed !important;
+    top: 10%;
+    left: 10%;
   }
 }
 </style>
