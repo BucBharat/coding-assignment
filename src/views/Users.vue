@@ -8,7 +8,12 @@
       <button id="signOut" @click="signOut">signout</button>
     </div>
     <div id="imageBox" class="users">
-      <div id="indImage" v-for="user in users" :key="user.id">
+      <div
+        id="indImage"
+        :class="modalDisplay ? 'blur' : ''"
+        v-for="user in users"
+        :key="user.id"
+      >
         <img
           :src="user.image"
           width="400"
@@ -20,13 +25,13 @@
           <p>{{ user.address.city }}</p>
         </div>
       </div>
-      <div v-if="this.currentUser != null">
-        <Modal
-          :class="modalDisplay ? 'displayClass' : 'nonDisplayClass'"
-          :user="currentUser"
-          @close-modal="closeModal"
-        />
-      </div>
+    </div>
+    <div v-if="this.currentUser != null">
+      <Modal
+        :class="modalDisplay ? 'displayClass' : 'nonDisplayClass'"
+        :user="currentUser"
+        @close-modal="closeModal"
+      />
     </div>
   </div>
 </template>
@@ -79,8 +84,13 @@ export default {
   position: sticky;
 } */
 
+.blur {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  opacity: 0.5;
+}
 .displayClass {
   /* position: relative; */
+  /* opacity: 1; */
   position: fixed !important;
   top: 45vh;
   left: 45vw;
