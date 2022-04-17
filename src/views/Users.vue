@@ -61,6 +61,7 @@ export default {
     },
     closeModal() {
       this.modalDisplay = false;
+      this.currentUser = null;
     },
     signOut() {
       localStorage.removeItem('accessToken');
