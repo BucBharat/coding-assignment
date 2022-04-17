@@ -7,6 +7,16 @@
       <MenuElement />
       <button id="signOut" @click="signOut">signout</button>
     </div>
+    <div id="mobileSideBar" @click="showMobileSideBar">
+      <font-awesome-icon icon="fa-solid fa-bars" />
+    </div>
+    <div v-if="mobileSideBarVar">
+      <p style="padding-top: 30px">company name</p>
+      <MenuElement />
+      <MenuElement />
+      <MenuElement />
+      <button id="signOut" @click="signOut">signout</button>
+    </div>
     <div id="imageBox" class="users">
       <div
         id="indImage"
@@ -50,6 +60,7 @@ export default {
       users: [],
       modalDisplay: false,
       currentUser: null,
+      mobileSideBarVar: false,
     };
   },
   methods: {
@@ -66,6 +77,9 @@ export default {
     signOut() {
       localStorage.removeItem('accessToken');
       this.$router.push({ name: 'Login' });
+    },
+    showMobileSideBar() {
+      this.mobileSideBarVar = !this.mobileSideBarVar;
     },
   },
   created() {
@@ -98,6 +112,10 @@ export default {
 }
 
 .nonDisplayClass {
+  display: none;
+}
+#mobileSideBar {
+  cursor: pointer;
   display: none;
 }
 #imageBox {
@@ -159,6 +177,9 @@ img:hover {
   #sideBar {
     display: none;
   }
+  #mobileSideBar {
+    display: flex;
+  }
   .displayClass {
     /* position: relative; */
     position: fixed !important;
@@ -170,6 +191,9 @@ img:hover {
   /* For mobile phones: */
   #sideBar {
     display: none;
+  }
+  #mobileSideBar {
+    display: flex;
   }
   .displayClass {
     /* position: relative; */

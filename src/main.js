@@ -11,13 +11,22 @@ import {
   faEnvelope,
   faPhone,
   faHouse,
+  faBars,
 } from '@fortawesome/free-solid-svg-icons';
 import { faChrome } from '@fortawesome/free-brands-svg-icons';
 
 /* import font awesome icon component */
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faUserSecret, faUser, faEnvelope, faPhone, faHouse, faChrome);
+library.add(
+  faUserSecret,
+  faUser,
+  faEnvelope,
+  faPhone,
+  faHouse,
+  faChrome,
+  faBars
+);
 // library.add(faUser);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
