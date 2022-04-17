@@ -12,6 +12,7 @@ import {
   faPhone,
   faHouse,
   faBars,
+  faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 import { faChrome } from '@fortawesome/free-brands-svg-icons';
 
@@ -25,7 +26,8 @@ library.add(
   faPhone,
   faHouse,
   faChrome,
-  faBars
+  faBars,
+  faArrowRightFromBracket
 );
 // library.add(faUser);
 Vue.component('font-awesome-icon', FontAwesomeIcon);

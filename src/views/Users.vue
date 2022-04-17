@@ -5,7 +5,10 @@
       <MenuElement />
       <MenuElement />
       <MenuElement />
-      <button id="signOut" @click="signOut">signout</button>
+      <button id="signOut" @click="signOut">
+        <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /> &emsp;
+        signout
+      </button>
     </div>
     <div id="mobileSideBar" @click="showMobileSideBar">
       <font-awesome-icon icon="fa-solid fa-bars" />
@@ -15,7 +18,10 @@
       <MenuElement />
       <MenuElement />
       <MenuElement />
-      <button id="signOut" @click="signOut">signout</button>
+      <button id="signOut" @click="signOut">
+        <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" />
+        &emsp; signout
+      </button>
     </div>
     <div id="imageBox" class="users">
       <div
@@ -178,6 +184,7 @@ img:hover {
     display: none;
   }
   #mobileSideBar {
+    /* width: 20vw; */
     display: flex;
   }
   .displayClass {
@@ -186,6 +193,12 @@ img:hover {
     top: 15%;
     left: 15%;
   }
+  #imageBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60vw;
+  }
 }
 @media only screen and (max-width: 1295px) and (min-width: 768px) {
   /* For mobile phones: */
@@ -193,6 +206,7 @@ img:hover {
     display: none;
   }
   #mobileSideBar {
+    /* width: 20vw; */
     display: flex;
   }
   .displayClass {
@@ -200,6 +214,12 @@ img:hover {
     position: fixed !important;
     top: 10%;
     left: 10%;
+  }
+  #imageBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60vw;
   }
 }
 </style>
