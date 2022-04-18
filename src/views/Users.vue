@@ -186,9 +186,11 @@ img:hover {
   #mobileSideBar {
     /* width: 20vw; */
     display: flex;
+    position: fixed !important;
   }
   #mobileSideBarContent {
     width: 20vw;
+    position: fixed !important;
     display: flex;
     flex-direction: column;
   }
@@ -213,6 +215,10 @@ img:hover {
   #mobileSideBar {
     /* width: 20vw; */
     display: flex;
+    position: fixed !important;
+  }
+  #mobileSideBarContent {
+    position: fixed !important;
   }
 
   .displayClass {
